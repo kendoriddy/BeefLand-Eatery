@@ -23,6 +23,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--poppins);
 }
@@ -58,15 +63,68 @@ main {
   margin-top: 100px;
 }
 
-.car-cards {
+.beef-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-.car-image img {
+.beef-card {
+  border: 1px solid var(--blue);
+  padding: 10px;
+  border-bottom-right-radius: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.beef-card:last-child {
+  margin-bottom: 80px;
+}
+
+.beef-image img {
   width: 100%;
-  height: 100px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.top-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-part h2 {
+  color: var(--blue);
+}
+
+.like-meal {
+  padding-bottom: 10px;
+}
+
+.like-icon {
+  cursor: pointer;
+  color: var(--orange);
+  transition: all 0.3s linear;
+  background: none;
+  border: none;
+}
+
+.like-meal span {
+  color: var(--dark);
+}
+
+.next-part {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.next-part button {
+  background-color: var(--light-blue);
+  color: var(--dark);
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 footer {
