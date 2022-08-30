@@ -148,6 +148,7 @@ footer {
   main {
     padding: 20px 10vw;
   }
+  
   .beef-cards {
     grid-template-columns: repeat(3, 1fr);
   }
