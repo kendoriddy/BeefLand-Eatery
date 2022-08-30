@@ -137,3 +137,18 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .beef-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 20px 10vw;
+  }
+  .beef-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
