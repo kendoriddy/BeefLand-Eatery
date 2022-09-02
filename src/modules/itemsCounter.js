@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
- import defaultConfig from '../../config/default.js';
+import defaultConfig from '../../config/default.js';
 
 const counter = document.querySelector('.item-counter');
 

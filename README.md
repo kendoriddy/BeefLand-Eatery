@@ -15,7 +15,8 @@
 
 [Live Demo Link](https://livedemo.com)
 
-
+## Screenshot
+![screenshot](./src/assets/app_screenshot.png)
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
