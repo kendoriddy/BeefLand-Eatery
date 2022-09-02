@@ -140,6 +140,10 @@ main {
   color: var(--blue);
 }
 
+footer span {
+  text-decoration: underline;
+}
+
 .like-meal span {
   color: var(--dark);
 }
@@ -176,10 +180,6 @@ footer {
   color: var(--light);
   text-align: center;
   padding: 20px 0;
-}
-
-footer span {
-  text-decoration: underline;
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
