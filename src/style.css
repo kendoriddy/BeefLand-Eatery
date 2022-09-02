@@ -178,6 +178,10 @@ footer {
   padding: 20px 0;
 }
 
+footer span {
+  text-decoration: underline;
+}
+
 @media (min-width: 600px) and (max-width: 899px) {
   .beef-cards {
     grid-template-columns: repeat(2, 1fr);
