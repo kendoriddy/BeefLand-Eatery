@@ -86,7 +86,6 @@ export default class Meal {
          <div class="comment-container">${item.creation_date}<br>${item.username}: ${item.comment}</div>     
       ;
         commentContainer += commentContent;
-      });
       commentId.innerHTML = commentContainer;
       commentId.insertBefore(commentCount, commentId.children[0]);
   
