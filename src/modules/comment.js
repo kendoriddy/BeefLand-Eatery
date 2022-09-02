@@ -89,4 +89,4 @@ export default class Meal {
       });
       commentId.innerHTML = commentContainer;
       commentId.insertBefore(commentCount, commentId.children[0]);
-    }
+  
