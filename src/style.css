@@ -32,7 +32,25 @@ body {
   font-family: var(--poppins);
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--dark);
+  padding: 30px;
+}
+
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--blue);
   color: var(--light);
   position: fixed;
@@ -49,6 +67,7 @@ header {
 
 .logo img {
   border-radius: 50%;
+  border: 1px solid var(--dark-grey);
   width: 50px;
   height: 50px;
   display: inline;
@@ -56,6 +75,13 @@ header {
 
 .logo p {
   display: inline;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px;
 }
 
 main {
