@@ -32,7 +32,25 @@ body {
   font-family: var(--poppins);
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--dark);
+  padding: 30px;
+}
+
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--blue);
   color: var(--light);
   position: fixed;
@@ -40,22 +58,31 @@ header {
   width: 100%;
 }
 
-.logo {
-  padding: 20px;
+.logo-container {
+  padding: 5px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo img {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.logo {
+  background-image: url(./assets/beefland.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 80px;
   display: inline;
 }
 
-.logo p {
+.logo-container p {
   display: inline;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 20px;
 }
 
 main {
@@ -73,7 +100,9 @@ main {
   border: 1px solid var(--blue);
   padding: 10px;
   border-bottom-right-radius: 25px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
 
 .beef-card:last-child {
@@ -108,6 +137,14 @@ main {
   border: none;
 }
 
+.like-icon:hover {
+  color: var(--blue);
+}
+
+footer span {
+  text-decoration: underline;
+}
+
 .like-meal span {
   color: var(--dark);
 }
@@ -116,6 +153,10 @@ main {
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+
+button {
+  cursor: pointer;
 }
 
 .next-part button {
@@ -127,13 +168,17 @@ main {
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
+.liked {
+  color: var(--red);
+}
+
 footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: var(--blue);
-  color: white;
+  color: var(--light);
   text-align: center;
   padding: 20px 0;
 }

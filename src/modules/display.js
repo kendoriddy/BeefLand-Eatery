@@ -1,4 +1,5 @@
-const API_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?i=beef';
+import defaultConfig from '../../config/default.js';
+
 const cardContainer = document.querySelector('.beef-cards');
 
 const displayMeal = (data) => {
@@ -13,7 +14,7 @@ const displayMeal = (data) => {
             <h2>${data.strMeal}</h2>
             <div class='like-meal likes-${data.idMeal}'>
             <i class="fa-solid fa-heart like-icon" id='${data.idMeal}'></i> 
-            <span class='like-count ${data.idMeal}' id='${data.idMeal}'>100 likes</span>
+            <span class='like-count ${data.idMeal}' id='${data.idMeal}'>0 like</span>
             </div>
            </div>
             <div class="next-part">
@@ -26,7 +27,7 @@ const displayMeal = (data) => {
 };
 
 const getMeal = async () => {
-  const res = await fetch(API_URL);
+  const res = await fetch(defaultConfig.BEEF_API_URL);
   const data = await res.json();
   data.meals.forEach((beef) => {
     displayMeal(beef);
