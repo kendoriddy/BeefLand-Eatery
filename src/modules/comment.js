@@ -24,6 +24,7 @@ export default class Meal {
           mealContainer.className = 'modal-container';
           mealContainer.id = `${index}`;
           mealContainer.innerHTML = `
+          <div></div>
         <div class="close"><img class="close" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="close-button"></div> 
          <div class="card-image">
          <img src="${data.meals[index].strMealThumb}">
@@ -32,7 +33,9 @@ export default class Meal {
           <div class="first-part">
            <h2>${data.meals[index].strMeal}</h2>      
            </div>       
-          </div>                     
+          </div>
+          </div>
+          <div></div>                     
           <div id="comment${index}"></div>
           <h2 class="add-comment">Add a comment</h2>
           <form id="form${index}">        
@@ -40,6 +43,7 @@ export default class Meal {
           <textarea name="text-area" id="text${index}" class="text-area" placeholder="Your comment..." rows="5" maxlength="300" required></textarea><br>
           </form>
           <button class="comment-btn" type="button">Comment</button>
+          </div>
          `;
           this.mealPopup.appendChild(mealContainer);
           const commentId = document.getElementById(`comment${index}`);
