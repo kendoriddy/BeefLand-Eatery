@@ -18,7 +18,7 @@ Please find project requirements [here](https://github.com/microverseinc/curricu
 
 ## Please take a look at the video below
 <!-- The zoom video -->
-[Video Link](https://drive.google.com/file/d/19WrlCZSr34eaL7iv3_WDQ0SShjVAQIRT/view?usp=sharing)
+[Video Link](https://drive.google.com/file/d/1t5tp8gLhIBHoD308hiXMy7fPgWxiP-GQ/view?usp=sharing)
 
 ## How it works
 
