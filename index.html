@@ -8,19 +8,22 @@
   <script defer src="main.js"></script></head>
   <body>
     <header>
-      <div class="logo">
-        <a href="/">
-          <img
-            src="https://img.freepik.com/free-vector/gradient-car-dealer-logo-template_23-2149334632.jpg?w=1800&t=st=1661853732~exp=1661854332~hmac=449ca538735bc11a1b6c1ec0310194bd6edf473d673515197250e7ea06b96a62"
-            alt="logo"
-          />
-        </a>
-        <p><em>BeefLand</em></p>
+      <div class="logo-container">
+        <div class="logo"></div>
       </div>
+      <ul class="right-side">
+        <li><a href="#">Home</a></li>
+        <li class=""><a href="#meal-cards">Menu</a><span class="item-counter"></span></li>
+        <li class="display-none"><a href="#contact">Contacts</a></li>
+      </ul>
     </header>
-    <main>
+    <main id="meals-popup">
+      <h1>Your favorite Beef Meals</h1>
+      <div id="beef-cards" class="beef-cards"></div>
       <div class="beef-cards"></div>
     </main>
-    <footer><p>Copyright© RideOnOne & Ghislain</p></footer>
+    <footer>
+      <p>Copyright© <span><a target="_blank" rel="noopener" href="https://github.com/kendoriddy">RideOnOne</a></span> & Ghislain</p>
+    </footer>
   </body>
 </html>
