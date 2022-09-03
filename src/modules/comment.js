@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 export default class Meal {
   // Initialization
   constructor() {
@@ -6,7 +7,7 @@ export default class Meal {
     this.mealPopup = document.getElementById('meals-popup');
   }
 
-  // Get meals from Api, throw error if promise was not resoved
+  // Get meals from Api, throw error if promise was not resolved
   //  otherwise popup meal if comment button is clicked
 
    getMeal = async () => {
@@ -15,14 +16,14 @@ export default class Meal {
      this.popupMeal(data);
    };
 
-    //  Function that display meal when comment button is cloked
+    //  Function that display meal when comment button is clicked
     popupMeal = (data) => {
       const selectAllMeal = document.querySelectorAll('.show-meal');
       selectAllMeal.forEach((item, index) => {
         item.addEventListener('click', () => {
           const mealContainer = document.createElement('section');
           mealContainer.className = 'modal-container';
-          mealContainer.id = index;
+          mealContainer.id = `${index}`;
           mealContainer.innerHTML = `
         <div class="close"><img class="close" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="close-button"></div> 
          <div class="card-image">
@@ -40,8 +41,7 @@ export default class Meal {
           <textarea name="text-area" id="text${index}" class="text-area" placeholder="Your comment..." rows="5" maxlength="300" required></textarea><br>
           </form>
           <button class="comment-btn" type="button">Comment</button>
-          `
-         ;
+         `;
           this.mealPopup.appendChild(mealContainer);
           const commentId = document.getElementById(`comment${index}`);
           this.getComment(commentId, index);
@@ -76,16 +76,51 @@ export default class Meal {
       });
     }
 
-    const displayComment = (commentData, commentId) => {
+    displayComment = (commentData, commentId) => {
       let commentContainer = '';
       const commentCount = document.createElement('div');
       commentCount.className = 'comment-count';
-      commentCount.innerHTML = Comment (commentData.length);
+      commentCount.innerHTML = `Comment (${commentData.length})`;
       commentData.forEach((item) => {
-        const commentContent =       
+        const commentContent = `      
          <div class="comment-container">${item.creation_date}<br>${item.username}: ${item.comment}</div>     
-      ;
+      `;
         commentContainer += commentContent;
+      });
       commentId.innerHTML = commentContainer;
       commentId.insertBefore(commentCount, commentId.children[0]);
-  
+    }
+
+    // close popup when the close button is clicked
+    closeMeal = (index) => {
+      const closeBtn = document.querySelectorAll('.close');
+      closeBtn.forEach((item) => {
+        item.addEventListener('click', () => {
+          document.getElementById(`${index}`).remove();
+        });
+      });
+    }
+
+    // Add Comments
+    addComment = async (data, commentId, index) => {
+      const response = await fetch(this.INV_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      this.getComment(commentId, index);
+      return response;
+    }
+
+    //  Get comments
+    getComment = async (commentId, index) => {
+      const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vuFst9MhB4jbZDaMQsbn/comments?item_id=item${index}`);
+      const comments = await response.text().catch((error) => new Error(error));
+      const commentsData = JSON.parse(comments);
+      if (commentsData.error === undefined) {
+        this.displayComment(commentsData, commentId);
+      }
+    }
+}
