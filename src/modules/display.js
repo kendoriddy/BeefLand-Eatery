@@ -18,7 +18,7 @@ const displayMeal = (data) => {
             </div>
            </div>
             <div class="next-part">
-            <button class="sea-meal">Comment</button>
+            <button class="show-meal">Comment</button>
             <button>Reservation</button>
             </div>
           </div>
