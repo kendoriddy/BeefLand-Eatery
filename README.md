@@ -32,7 +32,7 @@ The BeefLand web application allows users to like, comment, and make a reservati
 
 ## Live Demo
 
-[Live Demo Link](https://kendoriddy.github.io/js-capstone/)
+[Live Demo Link](https://kendoriddy.github.io/BeefLand-Eatery/)
 
 
 ## Getting started
